@@ -1,0 +1,18 @@
+{
+  "sectionId": "ukuran",
+  "title": "Panduan Ukuran",
+  "description": "Pilih ukuran berdasarkan rentang berat badan agar fit tetap nyaman sepanjang hari.",
+  "columns": ["Kategori", "Rekomendasi Berat Badan", "Keterangan"],
+  "rows": [
+    {
+      "category": "Standard",
+      "weightRange": "BB 45-75 kg",
+      "description": "Cocok untuk siluet regular hingga loose."
+    },
+    {
+      "category": "Jumbo",
+      "weightRange": "BB 76-100 kg+",
+      "description": "Lebih lega, tetap jatuh rapi dan clean."
+    }
+  ]
+}
