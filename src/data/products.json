@@ -1,0 +1,42 @@
+{
+  "sectionId": "produk",
+  "title": "Pilih Warna Favoritmu",
+  "description": "Semua varian tersedia dengan harga sama:",
+  "price": "Rp 89.000",
+  "cardTitlePrefix": "Loose Pants",
+  "cardDescription": "Highwaist pleated fit, look clean dan nyaman dipakai.",
+  "shopLinks": [
+    {
+      "label": "Shopee",
+      "href": "#",
+      "icon": "shoppingBag"
+    },
+    {
+      "label": "TikTok Shop",
+      "href": "#",
+      "icon": "circlePlay"
+    }
+  ],
+  "items": [
+    {
+      "name": "Ivory",
+      "swatchKey": "ivory"
+    },
+    {
+      "name": "Black",
+      "swatchKey": "black"
+    },
+    {
+      "name": "Mocca",
+      "swatchKey": "mocca"
+    },
+    {
+      "name": "Grey",
+      "swatchKey": "grey"
+    },
+    {
+      "name": "White",
+      "swatchKey": "white"
+    }
+  ]
+}

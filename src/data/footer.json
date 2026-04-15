@@ -1,0 +1,34 @@
+{
+  "brand": "Abyaad",
+  "tagline": "Essential Basic Wear.",
+  "location": "Pekalongan, Indonesia",
+  "links": [
+    {
+      "label": "Produk",
+      "href": "#produk",
+      "type": "nav"
+    },
+    {
+      "label": "Ukuran",
+      "href": "#ukuran",
+      "type": "nav"
+    },
+    {
+      "label": "Cerita",
+      "href": "#cerita",
+      "type": "nav"
+    },
+    {
+      "label": "Instagram",
+      "href": "#",
+      "type": "social",
+      "icon": "camera"
+    },
+    {
+      "label": "WhatsApp",
+      "href": "#",
+      "type": "social",
+      "icon": "messageCircle"
+    }
+  ]
+}
