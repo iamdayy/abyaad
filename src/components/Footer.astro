@@ -1,24 +1,39 @@
 ---
-import { Camera, MessageCircle, MapPin } from 'lucide-react';
+import footerData from "../data/footer.json";
 ---
 
-<footer class="border-t border-slate-100 bg-white">
-  <div class="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-10 sm:px-6 sm:py-12 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-    <div>
-      <p class="text-lg font-semibold text-abyaad-navy">Abyaad</p>
-      <p class="mt-2 text-sm text-abyaad-stone">Essential Basic Wear.</p>
-      <p class="mt-1 inline-flex items-center gap-2 text-sm text-abyaad-stone">
-        <MapPin size={14} />
-        Pekalongan, Indonesia
+<footer class="border-t border-abyaad-line/80 bg-transparent">
+  <div
+    class="section-shell flex flex-col gap-6 py-12 text-[0.65rem] uppercase tracking-[0.18em] text-slate-500 lg:flex-row lg:items-center lg:justify-between"
+  >
+    <div class="space-y-2">
+      <p
+        class="font-display text-lg normal-case tracking-normal text-abyaad-ink"
+      >
+        {footerData.brand}
+      </p>
+      <p
+        class="max-w-xs text-[0.58rem] leading-relaxed tracking-[0.12em] text-slate-400"
+      >
+        Editorial essentials, built for daily wear and long-term rotation.
       </p>
     </div>
-
-    <div class="flex flex-wrap items-center gap-5 text-sm text-abyaad-stone">
-      <a href="#produk" class="transition duration-300 hover:text-abyaad-navy">Produk</a>
-      <a href="#ukuran" class="transition duration-300 hover:text-abyaad-navy">Ukuran</a>
-      <a href="#cerita" class="transition duration-300 hover:text-abyaad-navy">Cerita</a>
-      <a href="#" class="inline-flex items-center gap-1 transition duration-300 hover:text-abyaad-navy"><Camera size={14} /> Instagram</a>
-      <a href="#" class="inline-flex items-center gap-1 transition duration-300 hover:text-abyaad-navy"><MessageCircle size={14} /> WhatsApp</a>
+    <div class="flex flex-wrap gap-5">
+      {
+        footerData.links.map((link) => (
+          <a
+            href={link.href}
+            class="transition duration-300 hover:text-abyaad-ink"
+          >
+            {link.label}
+          </a>
+        ))
+      }
     </div>
+    <p
+      class="max-w-xs text-[0.58rem] leading-relaxed tracking-[0.12em] text-slate-400"
+    >
+      {footerData.copyright}
+    </p>
   </div>
 </footer>

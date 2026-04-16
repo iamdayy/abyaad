@@ -1,10 +1,14 @@
 {
-  "badge": "Essential Basic Wear",
-  "title": "Sederhana dalam rupa, maksimal dalam rasa.",
-  "description": "Loose Pants highwaist pleated dari Abyaad dirancang untuk hari yang aktif, tetap rapi, dan nyaman dipakai dari pagi hingga malam.",
-  "ctaLabel": "Lihat Koleksi",
+  "badge": "Collection 01",
+  "titleLead": "Elegance",
+  "titleAccent": "Uncomplicated",
+  "description": "Pakaian basics premium dari Pekalongan dengan potongan bersih dan rasa pakai yang ringan. Quiet luxury yang nyaman dipakai setiap hari, dibuat dari 100% organic fiber.",
+  "ctaLabel": "Belanja Essentials",
   "ctaTarget": "#produk",
-  "featuredLabel": "Produk Utama",
-  "featuredTitle": "Loose Pants Highwaist Pleated",
-  "featuredDescription": "Hadir dalam 5 warna esensial: Ivory, Black, Mocca, Grey, dan White."
+  "secondaryCtaLabel": "View Lookbook",
+  "secondaryCtaTarget": "#lookbook",
+  "featuredLabel": "Lookbook Highlight",
+  "featuredTitle": "Lightweight Tailoring",
+  "featuredDescription": "Siluet longgar, pleat yang tegas, dan material nyaman untuk dipakai berulang kali.",
+  "cloudinaryPublicId": "editorial/hero-lookbook"
 }

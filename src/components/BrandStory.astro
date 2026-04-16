@@ -1,12 +1,54 @@
-<section id="cerita" class="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-  <div class="grid gap-8 rounded-3xl border border-slate-100 bg-white p-7 shadow-sm md:grid-cols-2 md:p-10">
-    <div class="space-y-4">
-      <p class="text-sm font-semibold uppercase tracking-[0.15em] text-abyaad-blue">Crafted in Pekalongan</p>
-      <h2 class="text-2xl font-semibold text-abyaad-navy sm:text-3xl">Dibuat Lokal, Dirancang untuk Dipakai Setiap Hari</h2>
+---
+import { CldImage } from "astro-cloudinary";
+import brandStoryData from "../data/brand-story.json";
+---
+
+<section id={brandStoryData.sectionId} class="section-shell py-16 md:py-20">
+  <div
+    class="grid gap-8 rounded-md border border-abyaad-line/70 bg-white p-7 shadow-sm md:grid-cols-[1fr_1.15fr] md:items-center md:p-10"
+  >
+    <div class="space-y-5">
+      <p class="eyebrow">{brandStoryData.eyebrow}</p>
+      <h2 class="text-5xl leading-[0.9] text-abyaad-ink sm:text-6xl">
+        <span class="block">{brandStoryData.titleLead}</span>
+        <span class="block italic text-abyaad-navy"
+          >{brandStoryData.titleAccent}</span
+        >
+      </h2>
+      <div
+        class="space-y-3 text-sm leading-relaxed text-slate-600 sm:text-base"
+      >
+        {brandStoryData.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+      <div class="grid gap-4 pt-2 sm:grid-cols-2">
+        {
+          brandStoryData.metrics.map((metric) => (
+            <div class="rounded-sm border border-abyaad-line/60 bg-abyaad-mist/60 p-4">
+              <p class="font-display text-3xl leading-none text-abyaad-navy">
+                {metric.value}
+              </p>
+              <p class="mt-2 text-[0.62rem] uppercase tracking-[0.2em] text-slate-500">
+                {metric.label}
+              </p>
+            </div>
+          ))
+        }
+      </div>
     </div>
-    <p class="text-sm leading-relaxed text-abyaad-stone sm:text-base">
-      Setiap Abyaad Loose Pants dikerjakan dengan ketelitian pengrajin lokal Pekalongan. Kami percaya basic wear terbaik harus ringan dipandang,
-      nyaman dipakai, dan konsisten kualitasnya.
-    </p>
+    <div class="overflow-hidden rounded-sm border border-abyaad-line/60">
+      <CldImage
+        src={brandStoryData.cloudinaryPublicId}
+        alt="Abyaad craftsmanship and fabric detail"
+        width={1300}
+        height={920}
+        crop="fill"
+        gravity="auto"
+        quality="auto"
+        format="auto"
+        class="h-[23rem] w-full object-cover"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
   </div>
 </section>

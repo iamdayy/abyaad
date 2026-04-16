@@ -1,0 +1,24 @@
+{
+  "sectionId": "faq",
+  "eyebrow": "Common Questions",
+  "title": "FAQ Essentials",
+  "description": "Jawaban singkat tentang bahan, sizing, pengiriman, dan kanal belanja resmi Abyaad.",
+  "items": [
+    {
+      "question": "Apakah bahan Abyaad nyaman dipakai harian?",
+      "answer": "Ya. Koleksi essentials kami dibuat untuk daily wear dengan handfeel ringan, breathable, dan tetap rapi dipakai seharian."
+    },
+    {
+      "question": "Bagaimana cara memilih ukuran yang tepat?",
+      "answer": "Gunakan section Size Guide di halaman utama untuk melihat rekomendasi berdasarkan rentang berat badan dan preferensi fit."
+    },
+    {
+      "question": "Bisa beli langsung dari website ini?",
+      "answer": "Pembelian dilakukan melalui kanal resmi marketplace kami di Shopee dan TikTok Shop agar checkout, pembayaran, dan tracking tetap aman."
+    },
+    {
+      "question": "Bagaimana kebijakan pengiriman dan return?",
+      "answer": "Kebijakan pengiriman dan pengembalian mengikuti platform pembelian. Detail lengkap tersedia di halaman Shipping and Returns."
+    }
+  ]
+}
