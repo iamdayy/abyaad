@@ -1,6 +1,25 @@
 {
   "sectionId": "cerita",
-  "eyebrow": "Crafted in Pekalongan",
-  "title": "Dibuat Lokal, Dirancang untuk Dipakai Setiap Hari",
-  "description": "Setiap Abyaad Loose Pants dikerjakan dengan ketelitian pengrajin lokal Pekalongan. Kami percaya basic wear terbaik harus ringan dipandang, nyaman dipakai, dan konsisten kualitasnya."
+  "eyebrow": "Our point of view",
+  "titleLead": "Quality Transcends",
+  "titleAccent": "Every Trend",
+  "paragraphs": [
+    "Abyaad lahir dari observasi sederhana: esensial terbaik adalah yang paling sering Anda pilih tanpa berpikir dua kali. Didirikan di Pekalongan, kami merancang pakaian harian dengan pendekatan minimal yang tetap relevan lintas musim.",
+    "Kami tidak mengejar tren sesaat. Setiap piece dibuat dengan material nyaman, detail yang bertahan lama, dan standar produksi etis untuk kualitas yang konsisten."
+  ],
+  "metrics": [
+    {
+      "label": "Organic Fiber",
+      "value": "100%"
+    },
+    {
+      "label": "Day Comfort",
+      "value": "365"
+    },
+    {
+      "label": "Made in Indonesia",
+      "value": "100%"
+    }
+  ],
+  "cloudinaryPublicId": "editorial/brand-story"
 }

@@ -1,34 +1,26 @@
 {
-  "brand": "Abyaad",
-  "tagline": "Essential Basic Wear.",
-  "location": "Pekalongan, Indonesia",
+  "brand": "Abyaad Essential Basic Wear.",
+  "copyright": "© 2026 Abyaad Essential Basic Wear. Quality engineered for daily life.",
   "links": [
     {
-      "label": "Produk",
-      "href": "#produk",
-      "type": "nav"
+      "label": "Privacy Policy",
+      "href": "/privacy",
+      "type": "legal"
     },
     {
-      "label": "Ukuran",
-      "href": "#ukuran",
-      "type": "nav"
+      "label": "Terms of Service",
+      "href": "/terms",
+      "type": "legal"
     },
     {
-      "label": "Cerita",
-      "href": "#cerita",
-      "type": "nav"
+      "label": "Shipping & Returns",
+      "href": "/shipping",
+      "type": "legal"
     },
     {
-      "label": "Instagram",
-      "href": "#",
-      "type": "social",
-      "icon": "camera"
-    },
-    {
-      "label": "WhatsApp",
-      "href": "#",
-      "type": "social",
-      "icon": "messageCircle"
+      "label": "Contact Us",
+      "href": "/contact",
+      "type": "legal"
     }
   ]
 }

@@ -1,9 +1,6 @@
 ---
-import '@fontsource/inter/400.css';
-import '@fontsource/inter/500.css';
-import '@fontsource/inter/600.css';
-import '@fontsource/inter/700.css';
-import '../styles/global.css';
+import { ShoppingBag } from "lucide-react";
+import "../styles/global.css";
 
 interface Props {
   title?: string;
@@ -11,51 +8,162 @@ interface Props {
 }
 
 const {
-  title = 'Abyaad | Essential Basic Wear',
-  description = 'Abyaad menghadirkan loose pants highwaist pleated yang nyaman, ringan, dan dibuat dengan sentuhan craftsmanship Pekalongan.'
+  title = "Abyaad Pakaian Basics | Fashion Lokal Nyaman & Sustainable Indonesia",
+  description = "Abyaad pakaian basics premium dari Pekalongan dengan 100% organic fiber. Daily essentials nyaman untuk rutinitas modern, tersedia di Shopee dan TikTok Shop.",
 } = Astro.props;
-const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
-const image = '/og-abyaad.jpg';
+const site = Astro.site ?? new URL("https://abyaad.id");
+const canonicalUrl = new URL(Astro.url.pathname, site);
+const image = new URL("/og-abyaad.jpg", site).toString();
+const imageAlt = "Abyaad editorial essential wear collection preview";
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Abyaad",
+  url: site.toString(),
+  image,
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Abyaad",
+  url: site.toString(),
+  description,
+  inLanguage: "id-ID",
+};
 ---
 
 <!doctype html>
-<html lang="id">
+<html lang="id-ID">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="keywords" content="Abyaad, Essential Basic Wear, Loose Pants, Highwaist Pleated, Pekalongan" />
+    <meta
+      name="keywords"
+      content="Abyaad, pakaian basics, fashion lokal Indonesia, celana highwaist, kaos basic premium, essentials Pekalongan, sustainable fashion Indonesia, organic fiber clothing"
+    />
     <meta name="author" content="Abyaad" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Abyaad" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:alt" content={imageAlt} />
+    <meta property="og:locale" content="id_ID" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL(image, Astro.site)} />
+    <meta name="twitter:image" content={image} />
+    <meta name="twitter:image:alt" content={imageAlt} />
     <meta name="theme-color" content="#82C9F9" />
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(organizationSchema)}
+    />
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(websiteSchema)}
+    />
   </head>
   <body>
-    <header class="sticky top-0 z-30 border-b border-slate-100/80 bg-white/90 backdrop-blur">
-      <nav class="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <a href="#" class="text-lg font-semibold tracking-tight text-abyaad-navy transition duration-300 hover:text-abyaad-blue">Abyaad</a>
-        <div class="flex items-center gap-5 text-sm font-medium text-abyaad-stone">
-          <a href="#produk" class="transition duration-300 hover:text-abyaad-navy">Produk</a>
-          <a href="#ukuran" class="transition duration-300 hover:text-abyaad-navy">Ukuran</a>
-          <a href="#cerita" class="transition duration-300 hover:text-abyaad-navy">Cerita</a>
+    <header
+      class="sticky top-0 z-30 border-b border-abyaad-line/70 bg-white/88 backdrop-blur"
+    >
+      <nav class="section-shell flex items-center justify-between py-4">
+        <a
+          href="/"
+          class="inline-flex items-center gap-3 text-sm text-abyaad-ink"
+        >
+          <span
+            class="grid h-5 w-5 place-items-center bg-abyaad-ink text-[0.5rem] font-medium uppercase tracking-[0.18em] text-white"
+            >A</span
+          >
+          <span class="font-display text-xl leading-none text-abyaad-ink"
+            >Abyaad</span
+          >
+        </a>
+        <div
+          class="hidden items-center gap-7 text-xs uppercase tracking-[0.18em] text-slate-600 md:flex"
+        >
+          <a
+            href="#produk"
+            class="border-b border-abyaad-blue pb-1 text-abyaad-ink transition duration-300"
+            >Collections</a
+          >
+          <a
+            href="#lookbook"
+            class="transition duration-300 hover:text-abyaad-ink">Lookbook</a
+          >
+          <a
+            href="#cerita"
+            class="transition duration-300 hover:text-abyaad-ink"
+            >Sustainability</a
+          >
+          <a href="#faq" class="transition duration-300 hover:text-abyaad-ink"
+            >FAQ</a
+          >
+          <a
+            href="#newsletter"
+            class="transition duration-300 hover:text-abyaad-ink">Essentials</a
+          >
+        </div>
+        <div class="flex items-center gap-3 text-slate-700">
+          <a
+            href="#produk"
+            class="inline-flex items-center justify-center rounded-full border border-abyaad-line bg-white p-2 transition duration-300 hover:border-abyaad-navy hover:text-abyaad-navy"
+            aria-label="Open bag"
+            data-cta="header-bag"
+          >
+            <ShoppingBag size={14} />
+          </a>
         </div>
       </nav>
     </header>
     <main>
       <slot />
     </main>
+    <script is:inline>
+      document.addEventListener("click", (event) => {
+        const target =
+          event.target instanceof Element
+            ? event.target.closest("[data-cta]")
+            : null;
+
+        if (!target) return;
+
+        const ctaId = target.getAttribute("data-cta");
+        if (!ctaId) return;
+
+        const payload = {
+          cta: ctaId,
+          text: target.textContent?.trim() || "",
+          href: target instanceof HTMLAnchorElement ? target.href : undefined,
+          path: window.location.pathname,
+          timestamp: Date.now(),
+        };
+
+        window.dispatchEvent(
+          new CustomEvent("abyaad:cta-click", { detail: payload }),
+        );
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: "abyaad_cta_click", ...payload });
+      });
+    </script>
   </body>
 </html>

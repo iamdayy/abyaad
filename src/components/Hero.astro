@@ -1,26 +1,94 @@
 ---
-import heroData from '../data/hero.json';
+import { CldImage } from "astro-cloudinary";
+import heroData from "../data/hero.json";
+
+type HeroContent = {
+  badge: string;
+  titleLead: string;
+  titleAccent: string;
+  description: string;
+  ctaLabel: string;
+  ctaTarget: string;
+  secondaryCtaLabel: string;
+  secondaryCtaTarget: string;
+  featuredLabel: string;
+  featuredTitle: string;
+  featuredDescription: string;
+  cloudinaryPublicId: string;
+};
+
+const hero = heroData as unknown as HeroContent;
 ---
 
-<section class="mx-auto grid w-full max-w-6xl gap-8 px-4 py-16 sm:px-6 md:grid-cols-2 md:items-center md:py-24 lg:px-8">
-  <div class="space-y-6">
-    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-abyaad-blue">{heroData.badge}</p>
-    <h1 class="text-3xl font-semibold leading-tight text-abyaad-navy sm:text-4xl lg:text-5xl">{heroData.title}</h1>
-    <p class="max-w-xl text-base leading-relaxed text-abyaad-stone sm:text-lg">
-      {heroData.description}
+<section
+  class="mx-auto grid w-full max-w-6xl gap-8 px-4 py-16 sm:px-6 md:grid-cols-2 md:items-center md:py-24 lg:px-8"
+>
+  <div class="order-2 space-y-6 md:order-1 md:pr-8">
+    <p class="eyebrow">{hero.badge}</p>
+    <h1 class="text-5xl leading-[0.92] text-abyaad-ink sm:text-6xl lg:text-7xl">
+      <span class="block">{hero.titleLead}</span>
+      <span class="mt-1 block text-abyaad-navy italic">{hero.titleAccent}</span>
+    </h1>
+    <p class="max-w-xl text-sm leading-relaxed text-slate-600 sm:text-base">
+      {hero.description}
     </p>
-    <a
-      href={heroData.ctaTarget}
-      class="inline-flex items-center rounded-full bg-abyaad-navy px-6 py-3 text-sm font-medium text-white transition duration-300 hover:bg-abyaad-blue hover:text-abyaad-navy"
-    >
-      {heroData.ctaLabel}
-    </a>
+    <div class="flex flex-wrap gap-3">
+      <a
+        href={hero.ctaTarget}
+        class="inline-flex items-center rounded-md bg-abyaad-navy px-6 py-3 text-[0.68rem] font-medium uppercase tracking-[0.2em] text-white transition duration-300 hover:bg-abyaad-blue hover:text-abyaad-navy"
+        data-cta="hero-primary"
+      >
+        {hero.ctaLabel}
+      </a>
+      <a
+        href={hero.secondaryCtaTarget}
+        class="inline-flex items-center rounded-md border border-abyaad-line bg-white px-6 py-3 text-[0.68rem] font-medium uppercase tracking-[0.2em] text-slate-700 transition duration-300 hover:border-abyaad-navy hover:text-abyaad-navy"
+        data-cta="hero-secondary"
+      >
+        {hero.secondaryCtaLabel}
+      </a>
+    </div>
   </div>
-  <div class="rounded-3xl bg-gradient-to-br from-abyaad-blue/25 via-white to-abyaad-ivory/40 p-8 sm:p-10">
-    <div class="space-y-4 rounded-2xl border border-white/80 bg-white/80 p-6 shadow-sm backdrop-blur">
-      <p class="text-sm font-medium text-abyaad-stone">{heroData.featuredLabel}</p>
-      <h2 class="text-2xl font-semibold text-abyaad-navy">{heroData.featuredTitle}</h2>
-      <p class="text-sm leading-relaxed text-abyaad-stone">{heroData.featuredDescription}</p>
+
+  <div
+    id="lookbook"
+    class="relative order-1 overflow-hidden rounded-sm bg-gradient-to-r from-[#eff5f8] via-[#c8dce4] to-[#4f89ab] shadow-panel md:order-2"
+  >
+    <div class="grid min-h-[28rem] grid-cols-[1fr_1.5fr]">
+      <div class="hidden bg-white/30 md:block"></div>
+      <div class="relative">
+        <CldImage
+          src={hero.cloudinaryPublicId}
+          alt="Editorial lookbook preview for Abyaad essentials"
+          width={1300}
+          height={1600}
+          crop="fill"
+          gravity="auto"
+          quality="auto"
+          format="auto"
+          class="h-full w-full object-cover"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-[#f4f7f8]/70 via-transparent to-[#1f5877]/40"
+        >
+        </div>
+      </div>
+    </div>
+    <div
+      class="absolute left-6 top-6 hidden max-w-[16rem] rounded-sm border border-white/60 bg-white/80 p-4 backdrop-blur lg:block"
+    >
+      <p class="text-[0.62rem] uppercase tracking-[0.24em] text-slate-500">
+        {hero.featuredLabel}
+      </p>
+      <h2 class="mt-3 font-display text-2xl leading-tight text-abyaad-ink">
+        {hero.featuredTitle}
+      </h2>
+      <p class="mt-2 text-xs leading-relaxed text-slate-600">
+        {hero.featuredDescription}
+      </p>
     </div>
   </div>
 </section>

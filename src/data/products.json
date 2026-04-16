@@ -1,42 +1,62 @@
 {
   "sectionId": "produk",
-  "title": "Pilih Warna Favoritmu",
-  "description": "Semua varian tersedia dengan harga sama:",
-  "price": "Rp 89.000",
-  "cardTitlePrefix": "Loose Pants",
-  "cardDescription": "Highwaist pleated fit, look clean dan nyaman dipakai.",
+  "title": "New Arrivals",
+  "description": "The latest iterations of our core silhouettes.",
+  "exploreLabel": "Explore All",
+  "exploreHref": "https://vt.tiktok.com/ZSHtMj9dS/?page=Mall&utm_source=abyaad.id&utm_medium=landing&utm_campaign=essentials_q2_2026&utm_content=explore_all",
+  "mainBadge": "Clean Anatomy",
   "shopLinks": [
     {
       "label": "Shopee",
-      "href": "#",
+      "href": "https://shopee.co.id/shop/273881235?utm_source=abyaad.id&utm_medium=landing&utm_campaign=essentials_q2_2026&utm_content=shopee_cta",
       "icon": "shoppingBag"
     },
     {
       "label": "TikTok Shop",
-      "href": "#",
+      "href": "https://vt.tiktok.com/ZSHtMj9dS/?page=Mall&utm_source=abyaad.id&utm_medium=landing&utm_campaign=essentials_q2_2026&utm_content=tiktok_cta",
       "icon": "circlePlay"
     }
   ],
   "items": [
     {
-      "name": "Ivory",
+      "name": "The Signature Heavy Tee",
+      "subtitle": "Optic White",
+      "category": "Essentials",
+      "price": "$85",
+      "cloudinaryPublicId": "products/lavie/lavie-white-1",
+      "swatchKey": "white"
+    },
+    {
+      "name": "Essential Merino Crew",
+      "subtitle": "Powder Blue",
+      "category": "Knitwear",
+      "price": "$145",
+      "cloudinaryPublicId": "products/lavie-palazzo/lavie-ivory-1",
       "swatchKey": "ivory"
     },
     {
-      "name": "Black",
+      "name": "Foundation Chino",
+      "subtitle": "Deep Navy",
+      "category": "Trousers",
+      "price": "$120",
+      "cloudinaryPublicId": "products/loro-s/loro-s-black-1",
       "swatchKey": "black"
     },
     {
-      "name": "Mocca",
+      "name": "Classic Oxford",
+      "subtitle": "Cloud White",
+      "category": "Shirts",
+      "price": "$95",
+      "cloudinaryPublicId": "products/tavi-s/tavi-s-white-1",
       "swatchKey": "mocca"
     },
     {
-      "name": "Grey",
+      "name": "Raw Hem Tee",
+      "subtitle": "Ash Charcoal",
+      "category": "Basics",
+      "price": "$65",
+      "cloudinaryPublicId": "products/lavie/lavie-black-1",
       "swatchKey": "grey"
-    },
-    {
-      "name": "White",
-      "swatchKey": "white"
     }
   ]
 }
