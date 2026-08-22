@@ -1,67 +1,55 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@500;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --canvas: #f4f5f6;
+  --canvas: #f5f7f8;
   --surface: #ffffff;
-  --ink: #0f1723;
-  --line: #d7dfe8;
-  --soft-blue: #e8f4ff;
+  --ink: #102331;
+  --muted: #63717a;
+  --line: #d7e0e5;
+  --navy: #163e52;
+  --blue: #b8e2f7;
+  --sand: #eadfcf;
 }
 
 html {
   font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
   scroll-behavior: smooth;
-}
-
-section[id] {
-  scroll-margin-top: 6rem;
+  background: var(--canvas);
 }
 
 body {
   @apply bg-abyaad-mist text-abyaad-ink antialiased;
-  background-image: radial-gradient(
-    circle at 10% 0%,
-    #ffffff 0%,
-    #f4f5f6 50%,
-    #edf1f6 100%
-  );
+  background: var(--canvas);
 }
 
-h1,
-h2,
-h3 {
+section[id] { scroll-margin-top: 6rem; }
+
+h1, h2, h3 {
   font-family: "Playfair Display", ui-serif, Georgia, serif;
   text-wrap: balance;
 }
 
-.section-shell {
-  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+.section-shell { @apply mx-auto w-full max-w-6xl px-5 sm:px-8 lg:px-10; }
+.eyebrow { @apply inline-flex items-center rounded-full bg-abyaad-blue/40 px-3 py-1 text-[0.62rem] font-medium uppercase tracking-[0.28em] text-abyaad-navy; }
+
+::selection { background: var(--navy); color: var(--surface); }
+
+a, button, input, textarea, select { transition: color 200ms, background-color 200ms, border-color 200ms, box-shadow 200ms, transform 200ms; }
+:focus-visible { outline: 2px solid var(--navy); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
 
-.eyebrow {
-  @apply inline-block rounded-full bg-abyaad-blue/25 px-3 py-1 text-[0.62rem] font-medium uppercase tracking-[0.28em] text-abyaad-navy;
+@layer utilities {
+  .text-balance { text-wrap: balance; }
 }
 
-::selection {
-  background: #1f5877;
-  color: #ffffff;
-}
-
-a,
-button,
-input,
-textarea,
-select {
-  transition-property:
-    color, background-color, border-color, box-shadow, transform;
-  transition-duration: 200ms;
-}
-
-:focus-visible {
-  outline: 2px solid #1f5877;
-  outline-offset: 3px;
+@media (max-width: 640px) {
+  .section-shell { @apply px-5; }
 }
