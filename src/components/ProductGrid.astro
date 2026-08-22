@@ -101,7 +101,7 @@ const getLinkAttributes = (href: string) =>
       };
 ---
 
-<section id={products.sectionId} class="section-shell py-16 md:py-20">
+<section id={products.sectionId} class="section-shell border-t border-abyaad-line py-16 md:py-24">
   <div class="mb-10 flex items-end justify-between gap-6">
     <div class="space-y-3">
       <h2 class="text-4xl leading-tight text-abyaad-ink sm:text-5xl">
@@ -124,7 +124,7 @@ const getLinkAttributes = (href: string) =>
   <div class="grid gap-4 lg:grid-cols-[1.35fr_1fr]">
     {
       mainProduct && (
-        <article class="group overflow-hidden rounded-md border border-abyaad-line/80 bg-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-panel">
+        <article class="group overflow-hidden rounded-none border border-abyaad-line/80 bg-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-panel">
           <div class="relative h-[20rem] overflow-hidden sm:h-[24rem]">
             <CldImage
               src={mainProduct.cloudinaryPublicId}
